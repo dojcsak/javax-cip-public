@@ -7,8 +7,7 @@ pipeline {
         stage('Commit') {
             steps {
                 echo 'Commit stage'
-                sh 'cd employees'
-                sh './mvnw -B package'
+                sh './employees/mvnw -B package'
             }
         }
         stage('Acceptance') {
